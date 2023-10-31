@@ -18,20 +18,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Tuan Duc Ngo
-name: Tuan Duc Ngo
-position: PhD Student 
-email: ductuan.ngo99@gmail.com
+title: Tuan Truong Vu
+name: Tuan Truong Vu
+position: AI Researcher
+email: truongvu0911nd@gmail.com
 description: >-
-  I am a PhD student in Computer Science of [UMass Amherst](https://www.umass.edu/), USA. Prior to that, I was an AI Research Resident at [VinAI Research](https://vinai.io/). I received my B.E. degree in Computer Engineering from the [Ho Chi Minh City University of Technology](https://hcmut.edu.vn/), Vietnam.
-
-  Email: ductuan.ngo99 (at) gmail (dot) com
+  I am currently a research resident at [VinAI Research](https://vinai.io/).
+  I received my B.E. degree in Computer Science from the [Hanoi University of Science and Technology](https://hust.edu.vn/), Vietnam.
+  Email: truongvu0911nd (at) gmail (dot) com
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://ngoductuanlhp.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: DTuanNgo
-github_username: ngoductuanlhp
-google_scholar: 2_G-DxIAAAAJ
+url: "http://truongvu2000nd.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: TruongV091100
+github_username: truongvu2000nd
+google_scholar: mTbQ2ZsAAAAJ
 # google_analytics: G-MFWSBLRKG0
 
 # Build settings
