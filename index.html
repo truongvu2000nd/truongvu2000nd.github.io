@@ -103,6 +103,7 @@ layout: null
       </div>
 
       <h2 class="title is-3">Publications</h2>
+      <a>* denotes equal contribution</a>
 
       {% for publication in site.data.publications %}
       <div class="publication-block columns">
@@ -121,12 +122,12 @@ layout: null
 
         <div class="column">
           <div class="content">
-            <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
+            <h3 class="publication-title">{{ publication.title }}</h3>
             <div class="publication-authors">
               {% for author_id in publication.authors %}
               {% if author_id contains "*" %}
-                {% assign str_size = author_id | size %}
-                {% assign author_id_ = author_id | slice: 0, size - 1 %}
+                {% assign author_id_size = author_id | size | minus: 1 %}
+                {% assign author_id_ = author_id | slice: 0, author_id_size %}
                 {% assign author = site.data.authors[author_id_] %}
                 {% assign equal = true %}
               {% else %}

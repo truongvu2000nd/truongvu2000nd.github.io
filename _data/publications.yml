@@ -15,11 +15,10 @@
 
 - id: LP-OVOD
   title: "LP-OVOD: Open-Vocabulary Object Detection by Linear Probing"
-  venue: CVPR, 2023
+  venue: WACV, 2024
   description: "Address low-quality boxes of OVOD by training a sigmoid linear classifier on pseudo labels retrieved from the top relevant region proposals to the novel text."
-  # github: VinAIResearch/ISBNet
   image: overview_lp_ovod.jpg
-  arxiv: 2303.00246
+  arxiv: 2310.17109
   authors:
     - chaupham*
     - truongvu*

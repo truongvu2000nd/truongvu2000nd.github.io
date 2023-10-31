@@ -40,7 +40,7 @@ layout: null
       <div class="columns is-vcentered">
         <div class="column">
           <h1 class="title is-2">{{ site.name }}</h1>
-          <h1 class="subtitle is-5">{{ site.position }}</h1>
+          <!-- <h1 class="subtitle is-5">{{ site.position }}</h1> -->
         </div>
         <div class="column is-narrow portrait-column">
           <img class="portrait-image" src="./images/profile_img.jpg" alt="A portrait of Tuan Ngo" />
@@ -81,10 +81,16 @@ layout: null
           <div class="column is-four-fifths">
             <b>{{ school.name }}</b><br />
             {{ school.description }}
+            <br />
+            {{ school.details }}
           </div>
           <div class="column is-one-fifths has-text-right">
             {{ school.dates }}
+            <!-- {{ school.details }} -->
           </div>
+          <!-- <div class="column is-one-fifths has-text-right">
+            
+          </div> -->
         </div>
         {% endfor %}
 
@@ -112,13 +118,22 @@ layout: null
             <a href="{{ publication.project_page }}"><b>{{ publication.title }}</b></a>
             <div class="publication-authors">
               {% for author_id in publication.authors %}
+              {% if author_id contains "*" %}
+                {% assign author_id_size = author_id | size | minus: 1 %}
+                {% assign author_id_ = author_id | slice: 0, author_id_size %}
+                {% assign author = site.data.authors[author_id_] %}
+                {% assign equal = true %}
+              {% else %}
+                {% assign author = site.data.authors[author_id] %}
+                {% assign equal = false %}
               {% assign author = site.data.authors[author_id] %}
+              {% endif %}
               <span class="author-block {% if author.is_me %}author-me{% endif %}">
                 {% if author.is_me %}
-                {{ author.first_name | slice: 0 }}. {{ author.last_name }}{% if forloop.last == false %},{%
+                {{ author.first_name | slice: 0 }}. {{ author.last_name }}{% if equal %}*{% endif %}{% if forloop.last == false %},{%
                 endif %}
                 {% else %}
-                <a href="{{ author.website }}">{{ author.first_name | slice: 0 }}. {{ author.last_name }}</a>{% if
+                <a href="{{ author.website }}">{{ author.first_name | slice: 0 }}. {{ author.last_name }}</a>{% if equal %}*{% endif %}{% if
                 forloop.last == false %},{% endif %}
                 {% endif %}
               </span>
