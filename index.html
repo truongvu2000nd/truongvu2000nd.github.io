@@ -125,8 +125,8 @@ layout: null
             <div class="publication-authors">
               {% for author_id in publication.authors %}
               {% if author_id contains "*" %}
-                {% assign str_size = author_id | size}
-                {% assign author_id_ = author_id | slice: 0, size - 1}
+                {% assign str_size = author_id | size %}
+                {% assign author_id_ = author_id | slice: 0, size - 1 %}
                 {% assign author = site.data.authors[author_id_] %}
                 {% assign equal = true %}
               {% else %}
