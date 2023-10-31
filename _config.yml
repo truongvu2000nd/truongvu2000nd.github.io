@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Tuan Truong Vu
-name: Tuan Truong Vu
+title: Tuan-Truong Vu
+name: Tuan-Truong Vu
 position: AI Researcher
 email: truongvu0911nd@gmail.com
 description: >-
